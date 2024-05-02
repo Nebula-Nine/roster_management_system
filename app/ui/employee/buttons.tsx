@@ -25,14 +25,14 @@ export function Edit({ id }: { id: string }) {
   );
 }
 
-export function RemoveEmployee({ id }: { id: string }) {
-  const deleteInvoiceWithID = deleteInvoice.bind(null, id);
-  return (
-    <form action={deleteInvoiceWithID}>
-      <button className="rounded-md border p-2 hover:bg-gray-100">
-        <span className="sr-only">Delete</span>
-        <TrashIcon className="w-5" />
-      </button>
-    </form>
-  );
-}
+// export function RemoveEmployee({ id }: { id: string }) {
+//   const deleteInvoiceWithID = deleteInvoice.bind(null, id);
+//   return (
+//     <form action={deleteInvoiceWithID}>
+//       <button className="rounded-md border p-2 hover:bg-gray-100">
+//         <span className="sr-only">Delete</span>
+//         <TrashIcon className="w-5" />
+//       </button>
+//     </form>
+//   );
+// }

@@ -11,14 +11,11 @@ export default function Scheduler() {
   const eventSettings: EventSettingsModel = { dataSource: timelineResourceData }
   const group = { byGroupID: false, resources: ['Projects', 'Categories'], orientation: 'Vertical' }
 
-  const projectData: Object[] = [
-    { text: 'PROJECT 1', id: 1, color: '#cb6bb2' },
-    { text: 'PROJECT 2', id: 2, color: '#56ca85' },
-    { text: 'PROJECT 3', id: 3, color: '#df5286' },
-  ];
   const categoryData: Object[] = [
-    { text: 'Development', id: 1, color: '#1aaa55' },
-    { text: 'Testing', id: 2, color: '#7fa900' }
+    { text: 'John', id: 1, color: '#1aaa55' },
+    { text: 'Tom', id: 2, color: '#7fa900' },
+    { text: 'Frank', id: 3, color: '#7fa900' },
+    { text: 'David', id: 4, color: '#7fa900' },
   ];
   const timeScale = { enable: false };
 
@@ -28,12 +25,8 @@ export default function Scheduler() {
         <ViewsDirective>
           <ViewDirective option='TimelineWeek' />
           <ViewDirective option='TimelineMonth' />
-          {/* <ViewDirective option='Agenda' /> */}
         </ViewsDirective>
         <ResourcesDirective>
-          <ResourceDirective field='ProjectId' title='Choose Project' name='Projects' allowMultiple={false}
-            dataSource={projectData} textField='text' idField='id' colorField='color'>
-          </ResourceDirective>
           <ResourceDirective field='TaskId' title='Category' name='Categories' allowMultiple={true}
             dataSource={categoryData} textField='text' idField='id' colorField='color'>
           </ResourceDirective>
